@@ -14,12 +14,12 @@ function compareArray (a1, a2) {
 function swapEvenIndexes (userInput) {
   var storedItem;
   var arrayLength = userInput.length;
-  for (var i = 0; i < arrayLength/2; i++) {
-    if (i%2 === 0) {
+  for (var i = 0; i < arrayLength/2; i+=2) {
+    //if (i%2 === 0) {
       storedItem = userInput[i];
       userInput[i] = userInput[arrayLength-i-1];
       userInput[arrayLength-i-1] = storedItem;
-    }
+    //}
   }
   return userInput;
 }
@@ -31,7 +31,7 @@ console.log(compareArray ([10,5,8,7,6,9,4], swapEvenIndexes([4,5,6,7,8,9,10])));
 console.log(compareArray (['purple','orange','green','yellow','blue','red'],
     swapEvenIndexes(['red','orange','yellow','green','blue','purple'])));  //words
 console.log(compareArray ([4], swapEvenIndexes([4]))); //one number
-console.log(compareArray ([-4,5,-6], swapEvenIndexes([-6,5,-4]))); //negative numbers
+console.log(compareArray ([[4,5],[6,7],[8,9]], swapEvenIndexes([[8,9],[6,7],[4,5]]))); //array
 
 
 
