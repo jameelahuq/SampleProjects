@@ -8,7 +8,7 @@ function calculatorParser(string) {
   var string = string.split(regex);
   var tots;
 
-  while (string.length > 1) {
+  while (string.length > 1) { //TODO: account for order of operations
     string.forEach(function (num, int, array) {
       switch (num) {
         case '*':
@@ -31,56 +31,8 @@ function calculatorParser(string) {
     });
   };
 
-
-
-
-
-
-
-
-//  if (!string) //TODO: error for non-equation answers: "5 5" "+5-6" etc.
-//  return "Error: no value, try again."
-//  string = string.replace(/ /g,'').split("");
-//
-//
-//  var addIsDone = string.replace(/\d+(?:\*|\+|\-|\/)\d+/, function() {
-
-  ////})
-  //
-  //  var myString = "something format_abc";
-  //  var myRegexp = /(?:^|\s)format_(.*?)(?:\s|$)/g;
-  //  var match = myRegexp.exec(myString);
-  //  alert(match[1]);  // abc
-  //
-  //      match = myRegexp.exec(myString);
-  //  while (match != null) {
-  //    // matched text: match[0]
-  //    // match start: match.index
-  //    // capturing group n: match[n]
-  //    match = myRegexp.exec(myString);
-  //  }
   return string[0];
 };
 
-myString = "2+5*9-10/5";
 
-console.log(calculatorParser(myString));
-
-
-
-
-
-
-//calculator parser
-//
-//math operations
-//
-//4+(3-10)/6*4
-//
-//accept a string
-//so using order of operations
-//can't use exec
-
-//HARD MODE//
-//exponents
-//decimal
+console.log(calculatorParser("2+5*9-10/5"));
