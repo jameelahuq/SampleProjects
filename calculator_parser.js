@@ -3,9 +3,6 @@
  */
 function calculatorParser(string) {
 //PEMDAS
-
-  var string="4+6-5*20/10";
-
   var regex = (/([-+*\/])/g);
 
   var string = string.split(regex);
@@ -62,10 +59,10 @@ function calculatorParser(string) {
   //    // capturing group n: match[n]
   //    match = myRegexp.exec(myString);
   //  }
-  return string;
+  return string[0];
 };
 
-myString = "2+5*9-2/99";
+myString = "2+5*9-10/5";
 
 console.log(calculatorParser(myString));
 
