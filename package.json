@@ -1,0 +1,27 @@
+{
+  "name": "pirate_bay_test_package",
+  "version": "1.0.0",
+  "description": "test package that scrapes pirate bay",
+  "bin": "index.js",
+  "dependencies": {
+    "cheerio":"^0.19.0",
+    "request":"^2.61.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishanoire/SampleProjects.git"
+  },
+  "keywords": [
+    "test",
+    "piratebay"
+  ],
+  "author": "Nisha Noire",
+  "license": "HUQ",
+  "bugs": {
+    "url": "https://github.com/nishanoire/SampleProjects/issues"
+  },
+  "homepage": "https://github.com/nishanoire/SampleProjects#readme"
+}
