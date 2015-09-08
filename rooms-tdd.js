@@ -7,8 +7,6 @@
 //----------
 
 
-
-
 class House {
 
   constructor(nameString) {
@@ -89,8 +87,6 @@ describe ("addRoom", () => {
     let room3 = new Room({rmWidth: 8, rmLength: 11});
     house1 = new House("Terra Vista");
     house2 = new House("Mendel");
-    //house1.addRoom(room1);
-    //house1.addRoom(room2);
     house2.addRoom(room3);
 
     house1.addRoom(room1).addRoom(room2);
