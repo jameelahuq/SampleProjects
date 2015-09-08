@@ -1,14 +1,23 @@
 {
-  "name": "pirate_bay_test_package",
+  "name": "sample_projects",
   "version": "1.0.0",
   "description": "test package that scrapes pirate bay",
-  "bin": "index.js",
+  "bin": {
+    "pirate_bay_test_package": "index.js"
+  },
   "dependencies": {
-    "cheerio":"^0.19.0",
-    "request":"^2.61.0"
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "chai": "^3.2.0",
+    "cheerio": "^0.19.0",
+    "mocha": "^2.3.1",
+    "mocha-loader": "^0.7.1",
+    "request": "^2.61.0",
+    "webpack": "^1.12.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
@@ -19,9 +28,14 @@
     "piratebay"
   ],
   "author": "Nisha Noire",
-  "license": "HUQ",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/nishanoire/SampleProjects/issues"
   },
-  "homepage": "https://github.com/nishanoire/SampleProjects#readme"
+  "homepage": "https://github.com/nishanoire/SampleProjects#readme",
+  "main": "room-counter.js",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "mocha": "^2.3.1"
+  }
 }

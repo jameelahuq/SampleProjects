@@ -14,3 +14,8 @@ function phone_formatted(string) {
 
 console.log(phone_formatted('4773948'));
 console.log(phone_formatted('8154773945'));
+
+
+
+//impliment reverse using reduce
+

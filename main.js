@@ -1,7 +1,6 @@
 /**
  * Created by HUQ on 8/28/15.
  */
-'use strict':
 
 $(document).ready(init);
 
