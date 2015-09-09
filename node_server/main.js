@@ -1,35 +1,44 @@
 var http = require('http');
+var request = require('request');
 
 var PORT = 8000;
 
-var server = http.createServer(function(request, response){
+var server = http.createServer(function(req, res){
   console.log('\n');
   console.log(new Date());
-  console.log("url:", request.url);
-  console.log("method:", request.method);
-  console.log("statusCode:", request.statusCode);
-  console.log("statusMessage:", request.statusMessage);
+  console.log("url:", req.url);
+  console.log("method:", req.method);
+  console.log("statusCode:", req.statusCode);
+  //console.log("statusMessage:", req.statusMessage);
 
-  switch(request.url) {
+  switch(req.url) {
+    case '/weather':
+      request('http://api.wunderground.com/api/3a5cfa6be0748f06/conditions/q/IL/Crystal_Lake.json', function(error, response, body){
+          console.log('error: ', error);
+          console.log('response: ', Object.keys(response));
+          console.log('body: ', body);
+
+          res.end();
+      });
+      break;
     case '/users':
     {
-      response.statusCode = 404;
-      response.write('<h1 style="color: mediumpurple">Nope</h1>');
-      response.end("no data here:(");
+      res.statusCode = 404;
+      res.write('<h1 style="color: mediumpurple">Nope</h1>');
+      res.end("no data here:(");
       break;
     }
       case '/redirect':
-      response.writeHead(302, {
+      res.writeHead(302, {
         'Location': 'DARKSIDE'
       });
       //response.end('<body style="background-color: mediumpurple"></body>');
       break;
       default :
           //puts this HTML on the page providing no other response is viable
-      response.end("It's THE DEFAULT!");
+      res.end("It's THE DEFAULT!");
   }
-
-  response.end("some text!");
+  res.end("some text!");
   //console.log("response:", response);
 });
 
